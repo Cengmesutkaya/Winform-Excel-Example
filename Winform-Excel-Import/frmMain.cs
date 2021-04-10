@@ -34,14 +34,15 @@ namespace Winform_Excel_Import
             DataTable table = dataTableCollection[cboSheet.SelectedItem.ToString()];
             dataGrid.DataSource = table;
             List<Customer> customers = new List<Customer>(); // Api tarafından gelen model
-            foreach (int row in dataGrid.Rows)
-            {
-                Customer customer = new Customer();
-                customer.Code = table.Rows[row]["Code"].ToString();
-                customer.Code = table.Rows[row]["Name"].ToString();
-                customers.Add(customer);
-            }
-        }    
+            /// Veri veri tabanına eklenmek istenirse bu kod bloğu kullanılabilir.
+            //for (int i = 0; i < dataGrid.Rows.Count; i++)          
+            //{
+            //    Customer customer = new Customer();
+            //    customer.Code = table.Rows[i]["Code"].ToString(); 
+            //    customer.Name = table.Rows[i]["Name"].ToString();
+            //    customers.Add(customer);
+            //}
+        }
         public void LoadExcel()
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Excel Files|*.xls;*.xlsx;*.xlsm" })
