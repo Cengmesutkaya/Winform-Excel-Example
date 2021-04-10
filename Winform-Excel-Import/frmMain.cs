@@ -15,7 +15,7 @@ using Winform_Excel_Import.models;
 namespace Winform_Excel_Import
 {
     public partial class frmMain : MetroForm
-    { 
+    {
         DataTableCollection dataTableCollection;
         public frmMain()
         {
@@ -27,6 +27,7 @@ namespace Winform_Excel_Import
         }
         private void btnBrowse_Click(object sender, EventArgs e)
         {
+
             LoadExcel();
         }
         public void FillGrid()
@@ -74,6 +75,19 @@ namespace Winform_Excel_Import
 
                 }
             }
+        }
+
+        private void btnSendData_Click(object sender, EventArgs e)
+        {
+            if (cboSheet.SelectedItem != null && txtFileName.Text != null)
+            {
+                string selecteditem = cboSheet.SelectedItem.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Dosya seçiniz ya da Excel türü seçiniz");
+            }
+
         }
     }
 }

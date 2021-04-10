@@ -36,7 +36,7 @@ namespace Winform_Excel_Import
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.btnSendData = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,14 +122,15 @@ namespace Winform_Excel_Import
             this.dataGrid.Size = new System.Drawing.Size(1357, 491);
             this.dataGrid.TabIndex = 6;
             // 
-            // metroButton1
+            // btnSendData
             // 
-            this.metroButton1.Location = new System.Drawing.Point(1, 651);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(1357, 43);
-            this.metroButton1.TabIndex = 7;
-            this.metroButton1.Text = "Verileri SalesArt Veritabınına Aktar";
-            this.metroButton1.UseSelectable = true;
+            this.btnSendData.Location = new System.Drawing.Point(1, 651);
+            this.btnSendData.Name = "btnSendData";
+            this.btnSendData.Size = new System.Drawing.Size(1357, 43);
+            this.btnSendData.TabIndex = 7;
+            this.btnSendData.Text = "Verileri SalesArt Veritabınına Aktar";
+            this.btnSendData.UseSelectable = true;
+            this.btnSendData.Click += new System.EventHandler(this.btnSendData_Click);
             // 
             // frmMain
             // 
@@ -137,7 +138,7 @@ namespace Winform_Excel_Import
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(1359, 711);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.btnSendData);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
@@ -158,7 +159,7 @@ namespace Winform_Excel_Import
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.DataGridView dataGrid;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton btnSendData;
     }
 }
 
